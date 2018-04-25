@@ -9,45 +9,50 @@ import java.util.List;
 
 public interface HeadLineService {
 
-	/**
-	 * 
-	 * @param headLineCondition
-	 * @return
-	 * @throws IOException
-	 */
-	List<HeadLine> getHeadLineList(HeadLine headLineCondition)
-			throws IOException;
+    /**
+     * 获取头条列表
+     *
+     * @param headLineCondition
+     * @return
+     * @throws IOException
+     */
+    List<HeadLine> getHeadLineList(HeadLine headLineCondition)
+            throws IOException;
 
-	/**
-	 * 
-	 * @param headLine
-	 * @param thumbnail
-	 * @return
-	 */
-	HeadLineExecution addHeadLine(HeadLine headLine,
+    /**
+     * 添加头条
+     *
+     * @param headLine
+     * @param thumbnail
+     * @return
+     */
+    HeadLineExecution addHeadLine(HeadLine headLine,
                                   CommonsMultipartFile thumbnail);
 
-	/**
-	 *
-	 * @param headLine
-	 * @param thumbnail
-	 * @return
-	 */
-	HeadLineExecution modifyHeadLine(HeadLine headLine,
+    /**
+     * 更新头条内容
+     *
+     * @param headLine
+     * @param thumbnail
+     * @return
+     */
+    HeadLineExecution modifyHeadLine(HeadLine headLine,
                                      CommonsMultipartFile thumbnail);
 
-	/**
-	 * 
-	 * @param headLineId
-	 * @return
-	 */
-	HeadLineExecution removeHeadLine(long headLineId);
+    /**
+     * 通过id删除头条
+     *
+     * @param headLineId
+     * @return
+     */
+    HeadLineExecution removeHeadLine(long headLineId);
 
-	/**
-	 * 
-	 * @param headLineIdList
-	 * @return
-	 */
-	HeadLineExecution removeHeadLineList(List<Long> headLineIdList);
+    /**
+     * id批量删除头条内容
+     *
+     * @param headLineIdList
+     * @return
+     */
+    HeadLineExecution removeHeadLineList(List<Long> headLineIdList);
 
 }

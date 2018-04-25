@@ -1,34 +1,19 @@
 package com.studyinghome.bootshop.dao;
 
 import com.studyinghome.bootshop.entity.UserProductMap;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+@Mapper
 public interface UserProductMapDao {
-	/**
-	 * 
-	 * @param userProductCondition
-	 * @param rowIndex
-	 * @param pageSize
-	 * @return
-	 */
-	List<UserProductMap> queryUserProductMapList(
+    List<UserProductMap> queryUserProductMapList(
             @Param("userProductCondition") UserProductMap userProductCondition,
             @Param("rowIndex") int rowIndex, @Param("pageSize") int pageSize);
 
-	/**
-	 *
-	 * @param userProductCondition
-	 * @return
-	 */
-	int queryUserProductMapCount(
+    int queryUserProductMapCount(
             @Param("userProductCondition") UserProductMap userProductCondition);
 
-	/**
-	 * 
-	 * @param userProductMap
-	 * @return
-	 */
-	int insertUserProductMap(UserProductMap userProductMap);
+    int insertUserProductMap(UserProductMap userProductMap);
 }

@@ -15,14 +15,10 @@ import java.util.List;
 public class WechatAuthExecution implements Serializable {
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	private int count;
-
 	private WechatAuth wechatAuth;
-
 	private List<WechatAuth> wechatAuthList;
 
 	// 失败的构造器

@@ -19,16 +19,12 @@ public class PersonInfoExecution implements Serializable {
 
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	// 店铺数量
 	private int count;
-
 	// 操作的personInfo（增删改店铺的时候用）
 	private PersonInfo personInfo;
-
 	// 获取的personInfo列表(查询店铺列表的时候用)
 	private List<PersonInfo> personInfoList;
 

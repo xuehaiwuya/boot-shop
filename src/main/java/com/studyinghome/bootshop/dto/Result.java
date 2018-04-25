@@ -15,11 +15,8 @@ import java.io.Serializable;
 public class Result<T> implements Serializable {
 
 	private boolean success;// 是否成功标志
-
 	private T data;// 成功时返回的数据
-
 	private String errorMsg;// 错误信息
-
 	private int errorCode;
 
 	// 成功时的构造器

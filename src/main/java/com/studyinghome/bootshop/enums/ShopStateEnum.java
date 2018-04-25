@@ -1,8 +1,16 @@
 package com.studyinghome.bootshop.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 /**
- * 使用枚举表述常量数据字典
+ * 店铺操作返回状态
+ *
+ * @author panxiang
+ * @create 2018-04-25
  */
+@Getter
+@AllArgsConstructor
 public enum ShopStateEnum {
 
 	CHECK(0, "审核中"), OFFLINE(-1, "非法商铺"), SUCCESS(1, "操作成功"), PASS(2, "通过认证"), INNER_ERROR(
@@ -10,21 +18,7 @@ public enum ShopStateEnum {
 			-1003, "传入了空的信息");
 
 	private int state;
-
 	private String stateInfo;
-
-	private ShopStateEnum(int state, String stateInfo) {
-		this.state = state;
-		this.stateInfo = stateInfo;
-	}
-
-	public int getState() {
-		return state;
-	}
-
-	public String getStateInfo() {
-		return stateInfo;
-	}
 
 	public static ShopStateEnum stateOf(int index) {
 		for (ShopStateEnum state : values()) {

@@ -5,35 +5,39 @@ import com.studyinghome.bootshop.entity.PersonInfo;
 
 public interface PersonInfoService {
 
-	/**
-	 * 
-	 * @param userId
-	 * @return
-	 */
-	PersonInfo getPersonInfoById(Long userId);
+    /**
+     * 通过用户id获取用户信息
+     *
+     * @param userId
+     * @return
+     */
+    PersonInfo getPersonInfoById(Long userId);
 
-	/**
-	 * 
-	 * @param personInfoCondition
-	 * @param pageIndex
-	 * @param pageSize
-	 * @return
-	 */
-	PersonInfoExecution getPersonInfoList(PersonInfo personInfoCondition,
+    /**
+     * 分页获取用户信息列表
+     *
+     * @param personInfoCondition
+     * @param pageIndex
+     * @param pageSize
+     * @return
+     */
+    PersonInfoExecution getPersonInfoList(PersonInfo personInfoCondition,
                                           int pageIndex, int pageSize);
 
-	/**
-	 * 
-	 * @param personInfo
-	 * @return
-	 */
-	PersonInfoExecution addPersonInfo(PersonInfo personInfo);
+    /**
+     * 添加用户
+     *
+     * @param personInfo
+     * @return
+     */
+    PersonInfoExecution addPersonInfo(PersonInfo personInfo);
 
-	/**
-	 * 
-	 * @param personInfo
-	 * @return
-	 */
-	PersonInfoExecution modifyPersonInfo(PersonInfo personInfo);
+    /**
+     * 更新用户信息
+     *
+     * @param personInfo
+     * @return
+     */
+    PersonInfoExecution modifyPersonInfo(PersonInfo personInfo);
 
 }

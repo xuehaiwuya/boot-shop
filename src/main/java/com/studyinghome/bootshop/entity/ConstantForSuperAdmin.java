@@ -1,5 +1,9 @@
 package com.studyinghome.bootshop.entity;
 
+/**
+ * @author panxiang
+ * @create 2018-04-25
+ */
 public class ConstantForSuperAdmin {
 	public static final String PAGE_SIZE = "rows";
 	public static final String PAGE_NO = "page";

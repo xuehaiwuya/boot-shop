@@ -7,6 +7,12 @@ import lombok.ToString;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 微信开发验证
+ *
+ * @author panxiang
+ * @create 2018-04-25
+ */
 @Getter
 @Setter
 @ToString

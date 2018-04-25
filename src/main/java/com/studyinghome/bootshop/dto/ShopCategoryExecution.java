@@ -15,10 +15,8 @@ import java.util.List;
 public class ShopCategoryExecution implements Serializable {
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	private ShopCategory shopCategory;
 
 	// 操作的商铺类别

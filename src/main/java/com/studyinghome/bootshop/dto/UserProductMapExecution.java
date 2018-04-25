@@ -15,16 +15,12 @@ import java.util.List;
 public class UserProductMapExecution implements Serializable {
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	// 授权数
 	private Integer count;
-
 	// 操作的shopAuthMap
 	private UserProductMap userProductMap;
-
 	// 授权列表（查询专用）
 	private List<UserProductMap> userProductMapList;
 

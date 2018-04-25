@@ -15,16 +15,12 @@ import java.util.List;
 public class ProductExecution implements Serializable {
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	// 店铺数量
 	private int count;
-
 	// 操作的product（增删改商品的时候用）
 	private Product product;
-
 	// 获取的product列表(查询商品列表的时候用)
 	private List<Product> productList;
 

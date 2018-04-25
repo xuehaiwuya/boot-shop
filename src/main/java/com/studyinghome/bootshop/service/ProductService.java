@@ -7,13 +7,45 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import java.util.List;
 
 public interface ProductService {
-	ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize);
+    /**
+     * 分页获取所有商品列表
+     *
+     * @param productCondition
+     * @param pageIndex
+     * @param pageSize
+     * @return
+     */
+    ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize);
 
-	Product getProductById(long productId);
+    /**
+     * 通过商品id获取商品
+     *
+     * @param productId
+     * @return
+     */
+    Product getProductById(long productId);
 
-	ProductExecution addProduct(Product product, CommonsMultipartFile thumbnail, List<CommonsMultipartFile> productImgs)
-			throws RuntimeException;
+    /**
+     * 添加商品
+     *
+     * @param product
+     * @param thumbnail
+     * @param productImgs
+     * @return
+     * @throws RuntimeException
+     */
+    ProductExecution addProduct(Product product, CommonsMultipartFile thumbnail, List<CommonsMultipartFile> productImgs)
+            throws RuntimeException;
 
-	ProductExecution modifyProduct(Product product, CommonsMultipartFile thumbnail,
+    /**
+     * 更新商品信息
+     *
+     * @param product
+     * @param thumbnail
+     * @param productImgs
+     * @return
+     * @throws RuntimeException
+     */
+    ProductExecution modifyProduct(Product product, CommonsMultipartFile thumbnail,
                                    List<CommonsMultipartFile> productImgs) throws RuntimeException;
 }

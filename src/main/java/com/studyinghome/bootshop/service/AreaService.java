@@ -9,42 +9,47 @@ import java.io.IOException;
 import java.util.List;
 
 public interface AreaService {
-	/**
-	 * 
-	 * @return
-	 * @throws JsonParseException
-	 * @throws JsonMappingException
-	 * @throws IOException
-	 */
-	List<Area> getAreaList() throws JsonParseException, JsonMappingException,
-			IOException;
+    /**
+     * 获取地域列表
+     *
+     * @return
+     * @throws JsonParseException
+     * @throws JsonMappingException
+     * @throws IOException
+     */
+    List<Area> getAreaList() throws JsonParseException, JsonMappingException,
+            IOException;
 
-	/**
-	 * 
-	 * @param area
-	 * @return
-	 */
-	AreaExecution addArea(Area area);
+    /**
+     * 添加地域
+     *
+     * @param area
+     * @return
+     */
+    AreaExecution addArea(Area area);
 
-	/**
-	 * 
-	 * @param area
-	 * @return
-	 */
-	AreaExecution modifyArea(Area area);
+    /**
+     * 更新地域信息
+     *
+     * @param area
+     * @return
+     */
+    AreaExecution modifyArea(Area area);
 
-	/**
-	 * 
-	 * @param areaId
-	 * @return
-	 */
-	AreaExecution removeArea(long areaId);
+    /**
+     * 通过id删除指定地域
+     *
+     * @param areaId
+     * @return
+     */
+    AreaExecution removeArea(long areaId);
 
-	/**
-	 * 
-	 * @param areaIdList
-	 * @return
-	 */
-	AreaExecution removeAreaList(List<Long> areaIdList);
+    /**
+     * id批量删除地域
+     *
+     * @param areaIdList
+     * @return
+     */
+    AreaExecution removeAreaList(List<Long> areaIdList);
 
 }

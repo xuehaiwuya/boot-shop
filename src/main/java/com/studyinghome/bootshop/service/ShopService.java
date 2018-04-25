@@ -37,11 +37,6 @@ public interface ShopService {
 	/**
 	 * 更新店铺信息（从店家角度）
 	 * 
-	 *  areaId
-	 *  shopAddr
-	 *  phone
-	 *  shopImg
-	 *  shopDesc
 	 * @return
 	 * @throws RuntimeException
 	 */

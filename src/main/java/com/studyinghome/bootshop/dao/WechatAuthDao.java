@@ -1,26 +1,13 @@
 package com.studyinghome.bootshop.dao;
 
 import com.studyinghome.bootshop.entity.WechatAuth;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface WechatAuthDao {
-	/**
-	 * 
-	 * @param openId
-	 * @return
-	 */
-	WechatAuth queryWechatInfoByOpenId(String openId);
+    WechatAuth queryWechatInfoByOpenId(String openId);
 
-	/**
-	 * 
-	 * @param wechatAuth
-	 * @return
-	 */
-	int insertWechatAuth(WechatAuth wechatAuth);
+    int insertWechatAuth(WechatAuth wechatAuth);
 
-	/**
-	 * 
-	 * @param wechatAuthId
-	 * @return
-	 */
-	int deleteWechatAuth(Long wechatAuthId);
+    int deleteWechatAuth(Long wechatAuthId);
 }

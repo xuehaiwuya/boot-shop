@@ -15,14 +15,10 @@ import java.util.List;
 public class LocalAuthExecution implements Serializable {
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	private int count;
-
 	private LocalAuth localAuth;
-
 	private List<LocalAuth> localAuthList;
 
 	// 失败的构造器

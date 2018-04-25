@@ -6,7 +6,7 @@ import com.studyinghome.bootshop.entity.UserAwardMap;
 public interface UserAwardMapService {
 
 	/**
-	 * 
+	 * 分页获取用户奖品列表
 	 * @param userAwardCondition
 	 * @param pageIndex
 	 * @param pageSize
@@ -16,14 +16,14 @@ public interface UserAwardMapService {
                                            Integer pageIndex, Integer pageSize);
 
 	/**
-	 * 
+	 * 通过id获取用户奖品
 	 * @param userAwardMapId
 	 * @return
 	 */
 	UserAwardMap getUserAwardMapById(long userAwardMapId);
 
 	/**
-	 * 
+	 * 兑换奖品
 	 * @param userAwardMap
 	 * @return
 	 * @throws RuntimeException
@@ -32,7 +32,7 @@ public interface UserAwardMapService {
 			throws RuntimeException;
 
 	/**
-	 * 
+	 * 更新奖品信息
 	 * @param userAwardMap
 	 * @return
 	 * @throws RuntimeException

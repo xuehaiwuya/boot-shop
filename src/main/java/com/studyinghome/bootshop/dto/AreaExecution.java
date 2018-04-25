@@ -16,16 +16,12 @@ import java.util.List;
 public class AreaExecution implements Serializable {
 	// 结果状态
 	private int state;
-
 	// 状态标识
 	private String stateInfo;
-
 	// 店铺数量
 	private int count;
-
 	// 操作的award（增删改商品的时候用）
 	private Area area;
-
 	// 获取的award列表(查询商品列表的时候用)
 	private List<Area> areaList;
 

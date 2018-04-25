@@ -5,7 +5,15 @@ import com.studyinghome.bootshop.entity.UserShopMap;
 
 public interface UserShopMapService {
 
-	UserShopMapExecution listUserShopMap(UserShopMap userShopMapCondition,
+    /**
+     * 列出用户店铺列表
+     *
+     * @param userShopMapCondition
+     * @param pageIndex
+     * @param pageSize
+     * @return
+     */
+    UserShopMapExecution listUserShopMap(UserShopMap userShopMapCondition,
                                          int pageIndex, int pageSize);
 
 }

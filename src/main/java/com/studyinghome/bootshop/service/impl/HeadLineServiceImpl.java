@@ -46,8 +46,7 @@ public class HeadLineServiceImpl implements HeadLineService {
             jedisStrings.set(key, jsonString);
         } else {
             String jsonString = jedisStrings.get(key);
-            JavaType javaType = mapper.getTypeFactory()
-                    .constructParametricType(ArrayList.class, HeadLine.class);
+            JavaType javaType = mapper.getTypeFactory().constructParametricType(ArrayList.class, HeadLine.class);
             headLineList = mapper.readValue(jsonString, javaType);
         }
         return headLineList;
@@ -55,8 +54,7 @@ public class HeadLineServiceImpl implements HeadLineService {
 
     @Override
     @Transactional
-    public HeadLineExecution addHeadLine(HeadLine headLine,
-                                         CommonsMultipartFile thumbnail) {
+    public HeadLineExecution addHeadLine(HeadLine headLine, CommonsMultipartFile thumbnail) {
         if (headLine != null) {
             headLine.setCreateTime(new Date());
             headLine.setLastEditTime(new Date());
@@ -76,13 +74,11 @@ public class HeadLineServiceImpl implements HeadLineService {
 
     @Override
     @Transactional
-    public HeadLineExecution modifyHeadLine(HeadLine headLine,
-                                            CommonsMultipartFile thumbnail) {
+    public HeadLineExecution modifyHeadLine(HeadLine headLine, CommonsMultipartFile thumbnail) {
         if (headLine.getLineId() != null && headLine.getLineId() > 0) {
             headLine.setLastEditTime(new Date());
             if (thumbnail != null) {
-                HeadLine tempHeadLine = headLineDao.queryHeadLineById(headLine
-                        .getLineId());
+                HeadLine tempHeadLine = headLineDao.queryHeadLineById(headLine.getLineId());
                 if (tempHeadLine.getLineImg() != null) {
                     FileUtil.deleteFile(tempHeadLine.getLineImg());
                 }
@@ -104,13 +100,12 @@ public class HeadLineServiceImpl implements HeadLineService {
     public HeadLineExecution removeHeadLine(long headLineId) {
         if (headLineId > 0) {
             try {
-                HeadLine tempHeadLine = headLineDao
-                        .queryHeadLineById(headLineId);
+                HeadLine tempHeadLine = headLineDao.queryHeadLineById(headLineId);
                 if (tempHeadLine.getLineImg() != null) {
                     FileUtil.deleteFile(tempHeadLine.getLineImg());
                 }
                 int effectedNum = headLineDao.deleteHeadLine(headLineId);
-               return cleanRedisCache(effectedNum);
+                return cleanRedisCache(effectedNum);
             } catch (Exception e) {
                 throw new RuntimeException("删除头条信息失败:" + e.toString());
             }
@@ -124,8 +119,7 @@ public class HeadLineServiceImpl implements HeadLineService {
     public HeadLineExecution removeHeadLineList(List<Long> headLineIdList) {
         if (headLineIdList != null && headLineIdList.size() > 0) {
             try {
-                List<HeadLine> headLineList = headLineDao
-                        .queryHeadLineByIds(headLineIdList);
+                List<HeadLine> headLineList = headLineDao.queryHeadLineByIds(headLineIdList);
                 for (HeadLine headLine : headLineList) {
                     if (headLine.getLineImg() != null) {
                         FileUtil.deleteFile(headLine.getLineImg());

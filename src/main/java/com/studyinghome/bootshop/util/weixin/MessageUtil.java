@@ -22,6 +22,9 @@ import java.util.Map;
 
 /**
  * 消息解析及封装工具类
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 public class MessageUtil {
 

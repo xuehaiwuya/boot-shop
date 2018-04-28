@@ -8,8 +8,9 @@ import java.io.Serializable;
 
 /**
  * 用户授权token
- * @author liusai01
  *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Getter
 @Setter

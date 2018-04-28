@@ -8,9 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>boot-shop</name>
-    <description>Demo project for Spring Boot</description>
-
+    <name>bootshop</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -41,7 +39,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.5</version>
+            <version>1.1.9</version>
         </dependency>
 
         <dependency>

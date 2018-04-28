@@ -13,7 +13,6 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 public class Result<T> implements Serializable {
-
 	private boolean success;// 是否成功标志
 	private T data;// 成功时返回的数据
 	private String errorMsg;// 错误信息

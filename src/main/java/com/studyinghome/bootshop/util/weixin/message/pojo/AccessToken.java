@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 /**
  * 微信通用接口凭证 
- *  
- * @author xiangli 
- * @date 2015-02-11 
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Getter
 @Setter

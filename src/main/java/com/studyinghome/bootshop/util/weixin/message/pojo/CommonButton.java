@@ -5,9 +5,9 @@ import lombok.Setter;
 
 /**
  * 普通按钮（子按钮） 
- *  
- * @author xiangli 
- * @date 2015-02-11 
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Getter
 @Setter

@@ -5,6 +5,10 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
+/**
+ * @author panxiang
+ * @create 2018-04-26
+ */
 @Getter
 @Setter
 public class WechatInfo implements Serializable {

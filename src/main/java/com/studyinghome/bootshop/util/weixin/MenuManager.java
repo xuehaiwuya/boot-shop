@@ -9,7 +9,9 @@ import java.net.URLEncoder;
 
 /**
  * 菜单管理器类
- * 
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 public class MenuManager {
 	private static Logger log = LoggerFactory.getLogger(MenuManager.class);

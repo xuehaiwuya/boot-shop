@@ -39,8 +39,7 @@ public class AreaServiceImpl implements AreaService {
             jedisStrings.set(key, jsonString);
         } else {
             String jsonString = jedisStrings.get(key);
-            JavaType javaType = mapper.getTypeFactory()
-                    .constructParametricType(ArrayList.class, Area.class);
+            JavaType javaType = mapper.getTypeFactory().constructParametricType(ArrayList.class, Area.class);
             areaList = mapper.readValue(jsonString, javaType);
         }
         return areaList;

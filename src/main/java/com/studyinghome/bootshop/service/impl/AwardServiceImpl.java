@@ -23,11 +23,9 @@ public class AwardServiceImpl implements AwardService {
     private AwardDao awardDao;
 
     @Override
-    public AwardExecution getAwardList(Award awardCondition, int pageIndex,
-                                       int pageSize) {
+    public AwardExecution getAwardList(Award awardCondition, int pageIndex, int pageSize) {
         int rowIndex = PageCalculator.calculateRowIndex(pageIndex, pageSize);
-        List<Award> awardList = awardDao.queryAwardList(awardCondition,
-                rowIndex, pageSize);
+        List<Award> awardList = awardDao.queryAwardList(awardCondition, rowIndex, pageSize);
         int count = awardDao.queryAwardCount(awardCondition);
         AwardExecution ae = new AwardExecution();
         ae.setAwardList(awardList);
@@ -66,13 +64,11 @@ public class AwardServiceImpl implements AwardService {
 
     @Override
     @Transactional
-    public AwardExecution modifyAward(Award award,
-                                      CommonsMultipartFile thumbnail) {
+    public AwardExecution modifyAward(Award award, CommonsMultipartFile thumbnail) {
         if (award != null && award.getShopId() != null) {
             award.setLastEditTime(new Date());
             if (thumbnail != null) {
-                Award tempAward = awardDao.queryAwardByAwardId(award
-                        .getAwardId());
+                Award tempAward = awardDao.queryAwardByAwardId(award.getAwardId());
                 if (tempAward.getAwardImg() != null) {
                     FileUtil.deleteFile(tempAward.getAwardImg());
                 }

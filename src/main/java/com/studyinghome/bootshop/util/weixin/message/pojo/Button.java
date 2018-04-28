@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 /**
  * 按钮的基类 
- *  
- * @author xiang li 
- * @date 2015-02-11 
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 
 @Getter

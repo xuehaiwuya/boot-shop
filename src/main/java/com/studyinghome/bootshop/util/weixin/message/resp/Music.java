@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 /**
  * 音乐model 
- *  
- * @author xiangli
- * @date 2015-02-10 
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Getter
 @Setter

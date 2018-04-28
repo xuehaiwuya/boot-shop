@@ -16,7 +16,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class PersonInfoExecution implements Serializable {
-
 	// 结果状态
 	private int state;
 	// 状态标识

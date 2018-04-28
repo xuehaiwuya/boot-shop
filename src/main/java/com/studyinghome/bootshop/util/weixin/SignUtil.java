@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 /**
  * 微信请求校验工具类
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 public class SignUtil {
 	// 与接口配置信息中的Token要一致

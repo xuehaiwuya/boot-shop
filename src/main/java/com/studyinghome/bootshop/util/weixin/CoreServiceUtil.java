@@ -10,6 +10,9 @@ import java.util.Map;
 
 /**
  * 核心服务类
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 public class CoreServiceUtil {
 

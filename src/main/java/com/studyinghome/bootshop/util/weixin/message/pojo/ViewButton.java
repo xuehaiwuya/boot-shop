@@ -5,10 +5,10 @@ import lombok.Setter;
 
 /**
 * view类型的菜单 
-*  
-* @author xiangli 
-* @date 2015-02-11 
-*/
+*
+ * @author panxiang
+ * @create 2018-04-26
+ */
 @Getter
 @Setter
 public class ViewButton extends Button {  

@@ -5,9 +5,9 @@ import lombok.Setter;
 
 /**
  * 图片消息 
- *  
- * @author xiangli
- * @date 2015-02-10
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Setter
 @Getter

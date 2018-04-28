@@ -6,9 +6,9 @@ import java.security.cert.X509Certificate;
 
 /**
  * 证书信任管理器（用于https请求）
- * 
- * @author liufeng
- * @date 2013-08-08
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 public class MyX509TrustManager implements X509TrustManager {
 

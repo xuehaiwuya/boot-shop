@@ -12,27 +12,24 @@ import java.util.List;
 
 @Service
 public class UserShopMapServiceImpl implements UserShopMapService {
-	@Autowired
-	private UserShopMapDao userShopMapDao;
+    @Autowired
+    private UserShopMapDao userShopMapDao;
 
-	@Override
-	public UserShopMapExecution listUserShopMap(
-			UserShopMap userShopMapCondition, int pageIndex, int pageSize) {
-		if (userShopMapCondition != null && pageIndex != -1 && pageSize != -1) {
-			int beginIndex = PageCalculator.calculateRowIndex(pageIndex,
-					pageSize);
-			List<UserShopMap> userShopMapList = userShopMapDao
-					.queryUserShopMapList(userShopMapCondition, beginIndex,
-							pageSize);
-			int count = userShopMapDao
-					.queryUserShopMapCount(userShopMapCondition);
-			UserShopMapExecution ue = new UserShopMapExecution();
-			ue.setUserShopMapList(userShopMapList);
-			ue.setCount(count);
-			return ue;
-		} else {
-			return null;
-		}
+    @Override
+    public UserShopMapExecution listUserShopMap(
+            UserShopMap userShopMapCondition, int pageIndex, int pageSize) {
+        if (userShopMapCondition != null && pageIndex != -1 && pageSize != -1) {
+            int beginIndex = PageCalculator.calculateRowIndex(pageIndex, pageSize);
+            List<UserShopMap> userShopMapList = userShopMapDao
+                    .queryUserShopMapList(userShopMapCondition, beginIndex, pageSize);
+            int count = userShopMapDao.queryUserShopMapCount(userShopMapCondition);
+            UserShopMapExecution ue = new UserShopMapExecution();
+            ue.setUserShopMapList(userShopMapList);
+            ue.setCount(count);
+            return ue;
+        } else {
+            return null;
+        }
 
-	}
+    }
 }

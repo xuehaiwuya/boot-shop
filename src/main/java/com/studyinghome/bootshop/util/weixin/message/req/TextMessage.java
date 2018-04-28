@@ -6,9 +6,9 @@ import lombok.Setter;
 
 /**
  * 消息基类（普通用户 -> 公众帐号）
- * 
- * @author xiangli
- * @date 2015-02-10
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Getter
 @Setter

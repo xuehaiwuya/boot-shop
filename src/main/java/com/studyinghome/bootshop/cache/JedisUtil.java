@@ -1,5 +1,6 @@
 package com.studyinghome.bootshop.cache;
 
+import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.BinaryClient.LIST_POSITION;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+@Configuration
 public class JedisUtil {
     /**
      * 缓存生存时间
@@ -87,6 +89,8 @@ public class JedisUtil {
 
 
     // *******************************************Keys*******************************************//
+
+    @Configuration
     public class Keys {
 
         public Keys(JedisUtil jedisUtil) {
@@ -294,6 +298,7 @@ public class JedisUtil {
     }
 
     // *******************************************Sets*******************************************//
+    @Configuration
     public class Sets {
         public Sets(JedisUtil jedisUtil) {
         }
@@ -496,6 +501,7 @@ public class JedisUtil {
     }
 
     // *******************************************Hash*******************************************//
+    @Configuration
     public class Hash {
         public Hash(JedisUtil jedisUtil) {
         }
@@ -720,6 +726,7 @@ public class JedisUtil {
     }
 
     // *******************************************Strings*******************************************//
+    @Configuration
     public class Strings {
         public Strings(JedisUtil jedisUtil) {
         }
@@ -963,6 +970,7 @@ public class JedisUtil {
     }
 
     // *******************************************Lists*******************************************//
+    @Configuration
     public class Lists {
         public Lists(JedisUtil jedisUtil) {
         }

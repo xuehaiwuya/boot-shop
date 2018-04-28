@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 /**
  * 消息基类（公众帐号 -> 普通用户）
- * 
- * @author xiangli
- * @date 2015-02-10
+ *
+ * @author panxiang
+ * @create 2018-04-26
  */
 @Getter
 @Setter
